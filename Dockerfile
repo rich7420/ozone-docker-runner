@@ -25,11 +25,13 @@ RUN set -eux ; \
       ncurses \
       openssl \
       procps \
+      python3 \
       snappy \
       sudo \
       unzip \
       zlib \
-    && dnf clean all
+    && dnf clean all \
+    && ln -sf /usr/bin/python3 /usr/bin/python
 
 
 #dumb init for proper init handling
